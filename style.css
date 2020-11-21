@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --orangeColor: #F2745F;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* preloader */
+#preloader {
+    width: 50px;
+    height: 50px;
+    border: 7px solid var(--orangeColor);
+    border-radius: 50%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: firstCircle 4s infinite forwards;
+}
+@keyframes firstCircle {
+    0% {
+        border-color: var(--orangeColor);
+        transform: scale(1);
+    }
+    25% {
+        border-color: #EAF0FF;
+        transform: scale(1.1);
+    }
+    50% {
+        border-color: var(--orangeColor);
+        transform: scale(1.3);
+    }
+    75% {
+        border-color: #EAF0FF;
+        transform: scale(1.1);
+    }
+    100% {
+        border-color: var(--orangeColor);
+        transform: scale(1);
+    }
+}
+a {
+    text-decoration: none !important;
+}
+.sectionHeading {
+    font-weight: 700;
+}
+header h1,
+.bannerHeading,
+.contentMenu p,
+.featuredFoodCard h3,
+.featuredFoodCard h5,
+.menuCarousel,
+.formHeading,
+.blogPostHeading {
+    font-family: 'Spectral', serif;
+}
+header {
+    background: #EAF0FF;
+}
+.navbar-toggler {
+    background: var(--orangeColor);
+}
+nav a {
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 20px;
+    color: #363e50 !important;
+}
+@media screen and (max-width: 767px) {
+    nav a{
+        border-bottom: 1px solid #dee2e6;
+    }
+    .container {
+        margin: 0 0 ;
+    }
+}
+/* banner */
+.banner {
+    background: linear-gradient(rgba(26, 24, 20, 0.7), rgba(26, 24, 20, 0.7)), url(./asset/images/banner.jpeg) no-repeat center/cover fixed; 
+    min-height: 80vh;
+    position: relative;
+}
+.menuBanner {
+    background: linear-gradient(rgba(26, 24, 20, 0.7), rgba(26, 24, 20, 0.7)), url(./asset/images/menuBanner.jpeg) no-repeat center/cover; 
+    min-height: 55vh;
+    position: relative;
+}
+.bannerCaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.bannerHeading {
+    font-weight: 700;
+}
+.bannerButton,
+.sendMessageButton {
+    background: var(--orangeColor);
+}
+.bannerButton {
+    animation-name: button;
+    animation-duration: 4s;
+}
+@keyframes button {
+    /* from {background-color: red;}
+  to {background-color: yellow;} */
+}
+/* content */
+.content {
+    padding-top: 80px;
+}
+.contentText {
+    background: var(--orangeColor);
+    height: 302px !important;
+    padding: 15px !important;
+}
+.contentTextHeading {
+    font-weight: 700;
+    padding: 10px 0;
+    letter-spacing: 2px;
+    font-size: 22px;
+}
+.contentTextBox {
+    background: #F3826F;
+    padding: 25px 22px;
+    font-size: 11px;
+}
+.orButton {
+    border: 1px solid #da6856;
+    font-size: 11px;
+}
+
+.orderNowButton {
+    color: var(--orangeColor);
+    font-size: 13px;
+}
+.contentCircle {
+    border: 12px solid #EAF0FF;
+}
+.contentMenu p{
+    font-size: 22px;
+    font-weight: 600;
+    color: #121212;
+    letter-spacing: 1.5px;
+}
+/* book Table Container */
+.bookTableContainer {
+    background: linear-gradient(rgba(15,16,20, 0.8), rgba(15,16,20, 0.8)), url(./asset/images/bookTableContainer.jpeg) no-repeat center/cover;
+}
+.inputDropDown {
+    background: #DDDDDD;
+    color: #9a9a9a;
+    padding: 8px 18px;
+    font-size: 14px;
+}
+.inputText {
+    padding: 5px 8px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+input:focus,
+.inputDropDown:focus {
+    outline: none;
+}
+.bookTableButton {
+    font-size: 13px;
+    padding: 7px 10px;
+    background: var(--orangeColor);
+}
+option {
+    color: #9a9a9a;
+}
+.appDownloadSection {
+    background: var(--orangeColor);
+}
+.appDownloadSection h2 {
+    font-weight: 700;
+}
+.downloadNowButton {
+    color: var(--orangeColor);
+    font-size: 13px;
+}
+/* featured food */
+.featuredFoodCard {
+    padding: 24px 30px !important;
+}
+.featuredFoodCard h5 {
+    font-weight: 400;
+}
+.featuredFoodCardImage {
+    position: relative;
+}
+.featuredFoodCardPrice {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 7px 14px;
+    color: var(--orangeColor);
+    background: #F5F2EC;
+}
+.featuredFoodCardHeading,
+.menuHeading {
+    margin-bottom: 20px;
+    padding-bottom: 6px;
+}
+.featuredFoodCard p{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+}
+/* menu */
+.owl-dots {
+    padding: 28px 0;
+}
+.owl-dot.active span {
+    background: var(--orangeColor) !important;
+}
+.owl-dot span{
+    background: #F2B5AF !important;
+}
+button:focus {
+    outline: none !important;
+}
+/* blog post */
+.blogPostImage {
+    position: relative;
+}
+.blogPostImageDate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 7px 14px;
+    color: var(--orangeColor);
+    background: #F5F2EC;
+}
+.blogPostSubHeading,
+.blogPostPara,
+.blogPostContinueReading {
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 500 !important;
+}
+.blogPostContinueReading {
+    color: var(--orangeColor);
+}
+.pagination a.active {
+    background: var(--orangeColor) !important;
+}
+.pagination a:hover:not(.active) {
+    background: var(--orangeColor) !important;
+    color: white !important;
+}
+/* signup */
+.signUp {
+    background: linear-gradient(rgba(23,5,0,0.7), rgba(23,5,0,0.7)), url(./asset/images/signUpImage.jpeg) no-repeat center/cover;
+    min-height: 75vh;
+    position: relative;
+}
+.signUpText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.signUpText .sectionHeading {
+    padding: 0 70px;
+}
+.signUpText button {
+    background: none;
+}
+.signUpInput {
+    background: #E6E5E3;
+}
+/* contact us */
+.contactUsBanner {
+    background: linear-gradient(rgba(26, 24, 20, 0.7), rgba(26, 24, 20, 0.7)), url(./asset/images/menuBanner.jpeg) no-repeat center/cover ;
+}
+.messageHeading,
+.contactHeading {
+    font-weight: 700;
+}
+.messageContact input, 
+.messageContact textarea {
+    background: #F4F4F4;
+}
+.contactText p{
+    color: #9a9a9a;
+    font-size: 13px;
+    font-weight: 400;
+}
+.contactText p span {
+    font-size: 15px;
+    font-weight: 500;
+}
+/* smiles */
+.smiles .card-header {
+    background: rgba(211, 47, 18, 0.5);
+}
+.smiles .card-header .btn:focus {
+    box-shadow: none;
+}
+.smiles button {
+    font-size: 1.25rem ;
+}
+.smiles .card-body {
+    background: #EAF0FF;
+}
+/* footer */
+footer div {
+    background: #363E50;
+}
+footer i {
+    color: #363E50;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+footer i:hover {
+    background: var(--orangeColor) !important;
+}
